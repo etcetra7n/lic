@@ -2,14 +2,14 @@
 name = "license-generator"
 version = "1.0.0"
 authors = [
-  { name="John Anchery", email="greeknio@gmail.com" },
+  { name="etcetra7n", email="greeknio@gmail.com" },
 ]
 
-description = "A console based tool to generate license for your project"
+description = "A console based license generator"
 readme = "README.md"
 license = {file = "LICENSE"}
 repository = "https://github.com/etcetra7n/lic"
-keywords = ["utility", "console"]
+keywords = ["utility"]
 requires-python = ">=2.7"
 classifiers = [
     'Programming Language :: Python',
@@ -31,5 +31,4 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/etcetra7n/lic"
 "Bug Tracker" = "https://github.com/etcetra7n/lic/issues"
