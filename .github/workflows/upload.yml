@@ -1,0 +1,25 @@
+name: Upload test PYPI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [released]
+  workflow_dispatch:
+
+jobs:
+  upload:
+    name: Upload
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade build
+          python3 -m build
+          python3 -m pip install --upgrade twine
+          twine upload -r testpypi dist/* -u __token__ -p ${{ secrets.TOKEN }}
