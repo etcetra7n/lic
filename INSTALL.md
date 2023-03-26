@@ -1,3 +1,5 @@
+To install license-generator run the following command
+
 ```shell
-$ pip install lic
+$ pip install license-generator
 ```
