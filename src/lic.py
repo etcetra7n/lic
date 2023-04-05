@@ -3,15 +3,15 @@ from os import listdir
 from shutil import copyfile
 
 def copy_license(name, filename):
-    copyfile(f'../licenses/{name}', filename)
+    copyfile(f"C:/licenses/{name}.txt", filename)
 
 def create_license(name, filename):
-    copyfile(filename, f'../licenses/{name}.txt')
+    copyfile(filename, f"C:/licenses/{name}.txt")
 
 def main():
     args = argv[1:]
 
-    licenses = listdir('../licenses')
+    licenses = listdir(f'{dirname(executable)}/licenses/')
 
     if(len(args)<1):
         print("No arguments recieved.")
